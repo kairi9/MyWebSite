@@ -1,0 +1,139 @@
+$header_color:rgba(24, 24, 24, 0.9);
+$table_data_light_color:rgba(204, 204, 204, 0.9);
+$table_data_dark_color:rgba(170, 170, 170, 0.9);
+*{margin: 0;}
+@mixin icon_defo() {
+  width: 60px;
+  transition: all 0.8s;
+  opacity: 0.8;
+  &:hover{
+    opacity: 1;
+    width: 80px;
+  }
+}
+
+body{
+  background-image: url("../images/fresh_snow.png");
+  header{
+    color: white;
+    background-color: $header_color;
+    width: 100%;
+    height: 80px;
+    .icon{
+      display: inline-block;
+      width: 10%;
+      padding: 10px 20px;
+      box-sizing: border-box;
+      img{
+        position: absolute;
+        top: 10px;
+        @include icon_defo();
+      }
+    }
+    .menu{
+      display: inline-block;
+      text-align: center;
+      width: 80%;
+      box-sizing: border-box;
+      h1{
+        line-height: 80px;
+        float: left;
+      }
+      h2{
+        line-height: 80px;
+        display: inline-block;
+        margin: 0 auto;
+      }
+      a{
+        text-decoration: none;
+        line-height: 80px;
+        padding:0 20px;
+        color: white;
+        float: right;
+        opacity: 0.8;
+        transition: all 0.8s;
+        &:hover{
+          font-size: x-large;
+          background-color: white;
+          color: black;
+          font-weight: 800;
+        }
+      }
+
+    }
+    .home_icon{
+      float: left;
+      img{
+        left: 10px;
+        &:hover{
+          top: 0;
+          left: 0;
+        }
+      }
+    }
+    .menu_icon{
+      float: right;
+      text-align: right;
+      img{
+        right: 10px;
+        &:hover{
+          top: 0;
+          right: 0;
+        }
+      }
+    }
+    .menu_tab{
+      display: none;
+      position: absolute;
+      top: 80px;
+      right: 0;
+      background-color: $header_color;
+      width: 30%;
+      a{
+        box-sizing: border-box;
+        width: 33%;
+        &:hover{
+          font-size: medium;
+        }
+      }
+    }
+  }
+
+  .wrapper{
+    .main{
+      width: 90%;
+      margin: 0 auto;
+      padding-bottom: 30px;
+      #main_head{
+        img{
+          margin-top: 20px;
+          width: 70px;
+          &:hover{
+            width: 90px;
+          }
+        }
+        h3{
+          display: inline-block;
+        }
+      }
+      #codes{
+        tr{
+          line-height: 40px;
+          td{
+            padding-left: 10px;
+          }
+        }
+        th{
+          background-color: $header_color;
+          color: white;
+        }
+        .light{
+          background-color: $table_data_light_color;
+        }
+        .dark{
+          background-color: $table_data_dark_color;
+        }
+      }
+    }
+  }
+}

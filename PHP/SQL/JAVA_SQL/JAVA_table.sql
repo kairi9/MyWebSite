@@ -1,0 +1,1 @@
+CREATE TABLE JAVA (  メソッド VARCHAR(100), 出来ること VARCHAR(500), リンク VARCHAR(500)  );
